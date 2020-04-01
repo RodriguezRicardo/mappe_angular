@@ -14,4 +14,14 @@ export class AppComponent {
   latC: number = 45.518039;
   lngC: number = 9.202651;
 
+  colore: string = '';
+  changeRed(){
+    this.colore = 'red';
+  }
+  changeYellow(){
+    this.colore = 'yellow';
+  }
+  changeGreen(){
+    this.colore = 'green';
+  }
 }
