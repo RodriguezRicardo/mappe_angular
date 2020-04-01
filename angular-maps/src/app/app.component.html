@@ -1,20 +1,27 @@
 {{title}}
 <!--Centrare la mappa alle nostre coordinate-->
-<agm-map [latitude]="lat" [longitude]="lng">
-
-  <!--Mettiamo un marker alle nostre coordinate-->
-  <agm-marker [latitude]="lat" [longitude]="lng">
+<agm-map [latitude]="latG" [longitude]="lngG">
+  <!--marker con icona gatto-->
+  <agm-marker [latitude]="latG" [longitude]="lngG" [iconUrl]="gatto">
   </agm-marker>
 
-  <agm-marker [latitude]="latC" [longitude]="lngC">
+  <!--marker con icona italia-->
+  <agm-marker [latitude]="lat" [longitude]="lng" [iconUrl]="italia">
   </agm-marker>
 
-  <!--tag per creare un cerchio-->
+  <!--marker con icona stella-->
+  <agm-marker [latitude]="latC" [longitude]="lngC" [iconUrl]="stella">
+  </agm-marker>
+
+  <!--marker con icona palme-->
+  <agm-marker [latitude]="latPalme" [longitude]="lngPalme" [iconUrl]="palme">
+  </agm-marker>
+
+  <!--tag per creare cerchi-->
   <agm-circle [latitude]="lat" [longitude]="lng"
     [radius]="5000"
     [fillColor]="colore">
   </agm-circle>
-
   <agm-circle [latitude]="latC" [longitude]="lngC"
     [radius]="1000"
     [fillColor]="colore">
