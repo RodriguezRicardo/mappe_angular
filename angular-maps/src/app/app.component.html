@@ -1,0 +1,26 @@
+{{title}}
+<!--Centrare la mappa alle nostre coordinate-->
+<agm-map [latitude]="lat" [longitude]="lng">
+
+  <!--Mettiamo un marker alle nostre coordinate-->
+  <agm-marker [latitude]="lat" [longitude]="lng">
+  </agm-marker>
+
+  <agm-marker [latitude]="latC" [longitude]="lngC">
+  </agm-marker>
+
+  <!--tag per creare un cerchio-->
+  <agm-circle [latitude]="lat" [longitude]="lng"
+    [radius]="5000"
+    [fillColor]="'red'">
+  </agm-circle>
+
+  <agm-circle [latitude]="latC" [longitude]="lngC"
+    [radius]="1000"
+    [fillColor]="'blue'">
+  </agm-circle>
+</agm-map>
+
+<button>Cambio rosso</button>
+<button>Cambio giallo</button>
+<button>Cambio verde</button>
