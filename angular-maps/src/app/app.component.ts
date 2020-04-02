@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Point } from 'src/models/point.model';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,8 @@ export class AppComponent {
   lngPalme: number= 9.1;
 
   colore: string = '';
+  cRect: string = '';
+
   changeRed(){
     this.colore = 'red';
   }
@@ -62,4 +65,32 @@ export class AppComponent {
       height: 50
     }
   };
+
+  //punti per creare il triangolo
+  triangle: Array<Point> =
+  [
+    {lng:9.1, lat:45.5},
+    {lng:9.0, lat:45.6},
+    {lng:9.0, lat:45.4}
+  ]
+
+  //punti per creare il rettangolo
+  rectangle: Array<Point> =
+  [
+    {lng:9.35, lat:45.54},
+    {lng:9.55, lat:45.54},
+    {lng:9.55, lat:45.44},
+    {lng:9.35, lat:45.44}
+  ]
+
+  //metodi per cambiare colore al rettangolo
+  changeRedRect(){
+    this.cRect = 'red';
+  }
+  changeYellowRect(){
+    this.cRect = 'yellow';
+  }
+  changeBlueRect(){
+    this.cRect = 'blue';
+  }
 }
